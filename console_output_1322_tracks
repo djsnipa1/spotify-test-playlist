@@ -1,0 +1,25 @@
+2025-06-26T18:39:25Z [web] 6:39:25 PM [vite-plugin-svelte] src/routes/spotify/[playlistId]/+page.svelte:15:4 `<img>` element should have an alt attribute
+2025-06-26T18:39:25Z [web] https://svelte.dev/e/a11y_missing_attribute
+2025-06-26T18:44:26Z [web] [Page Server Debug] Request received for playlistId: 4ihNP1UPb4UiA15BFfWr6g
+2025-06-26T18:44:26Z [web] [Spotify API Server Debug] Request received for playlistId: 4ihNP1UPb4UiA15BFfWr6g
+2025-06-26T18:44:26Z [web] [Spotify API Server Debug] Access Token obtained. Length: 139
+2025-06-26T18:44:27Z [web] [Spotify API Server Debug] Playlist Image URL fetched: https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84db7040f3b3cc88a06e9f1f99
+2025-06-26T18:44:27Z [web] [Spotify API Server Debug] Fetching batch with offset: 0, current total: 0
+2025-06-26T18:44:27Z [web] [Spotify API Server Debug] Received 100 items in this batch. Total from Spotify (if available): 1322
+2025-06-26T18:44:27Z [web] [Spotify API Server Debug] Current total tracks collected: 100
+2025-06-26T18:44:27Z [web] [Spotify API Server Debug] Fetching batch with offset: 100, current total: 100
+2025-06-26T18:44:28Z [web] [Spotify API Server Debug] Received 100 items in this batch. Total from Spotify (if available): 1322
+2025-06-26T18:44:28Z [web] [Spotify API Server Debug] Current total tracks collected: 200
+2025-06-26T18:44:28Z [web] [Spotify API Server Debug] Fetching batch with offset: 200, current total: 200
+2025-06-26T18:44:28Z [web] [Spotify API Server Debug] Received 100 items in this batch. Total from Spotify (if available): 1322
+2025-06-26T18:44:28Z [web] [Spotify API Server Debug] Current total tracks collected: 300
+2025-06-26T18:44:28Z [web] [Spotify API Server Debug] Fetching batch with offset: 300, current total: 300
+2025-06-26T18:44:29Z [web] [Spotify API Server Debug] Received 100 items in this batch. Total from Spotify (if available): 1322
+2025-06-26T18:44:29Z [web] [Spotify API Server Debug] Current total tracks collected: 400
+2025-06-26T18:44:29Z [web] [Spotify API Server Debug] Fetching batch with offset: 400, current total: 400
+2025-06-26T18:44:29Z [web] [Spotify API Server Debug] Received 100 items in this batch. Total from Spotify (if available): 1322
+2025-06-26T18:44:29Z [web] [Spotify API Server Debug] Current total tracks collected: 500
+2025-06-26T18:44:29Z [web] [Spotify API Server Debug] Final tracks to return: 500
+2025-06-26T18:44:30Z [web] [Page Server Debug] Received data from internal API. Playlist Image: https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84db7040f3b3cc88a06e9f1f99, Tracks count: 500
+2025-06-26T18:46:39Z [web] <Firebase Studio> Reloading preview...
+2025-06-26T18:46:39Z [web] <Firebase Studio> ▶️ Preview running
