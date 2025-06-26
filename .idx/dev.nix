@@ -17,6 +17,11 @@
       "svelte.svelte-vscode"
       "asvetliakov.vscode-neovim"
       "JustinDBoyson.openinvim"
+      "bradlc.vscode-tailwindcss"
+      "harshkothari.svelte-radar"
+      "RafaelMartinez.svelte-preview"
+      "Selemondev.vscode-shadcn-svelte"
+      "svelte.svelte-vscode-nightly"
     ];
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file
