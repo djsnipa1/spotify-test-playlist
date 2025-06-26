@@ -1,12 +1,22 @@
 <script>
     export let data;
 
-    // Access the tracks from the data loaded by +page.server.js
     const tracks = data.tracks;
+    const playlistName = data.playlistName;
+    const playlistImage = data.playlistImage; // Now receiving playlistImage from data
+
+    // Log the playlistImage to the browser console
+    console.log(`[Page Svelte Debug] Playlist Image received by component: ${playlistImage}`);
 </script>
 
 <div class="max-w-4xl mx-auto my-8 p-6 bg-[#1a1a1a] rounded-lg shadow-lg text-gray-200">
     <h1 class="text-[#1DB954] text-center mb-6 text-3xl font-bold">Playlist Tracks</h1>
+<h2 class="text-white text-center mb-6 text-2xl font-bold">{playlistName}</h2>
+    {#if playlistImage}
+        <div class="flex justify-center mb-6">
+            <img src={playlistImage} alt="Playlist Cover" class="rounded-lg shadow-md w-48 h-48 object-cover" />
+        </div>
+    {/if}
 
     {#if tracks && tracks.length > 0}
         <p class="mb-4 text-lg">Displaying {tracks.length} tracks.</p>
