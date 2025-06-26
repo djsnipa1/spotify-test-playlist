@@ -5,88 +5,25 @@
     const tracks = data.tracks;
 </script>
 
-<style>
-    .playlist-container {
-        max-width: 800px;
-        margin: 2rem auto;
-        padding: 1.5rem;
-        background-color: #1a1a1a;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        color: #e0e0e0;
-    }
-
-    h1 {
-        color: #1DB954; /* Spotify Green */
-        text-align: center;
-        margin-bottom: 1.5rem;
-    }
-
-    .track-list {
-        list-style: none;
-        padding: 0;
-    }
-
-    .track-item {
-        display: flex;
-        align-items: center;
-        padding: 0.8rem 0;
-        border-bottom: 1px solid #333;
-    }
-
-    .track-item:last-child {
-        border-bottom: none;
-    }
-
-    .track-info {
-        flex-grow: 1;
-        margin-left: 1rem;
-    }
-
-    .track-number {
-        font-weight: bold;
-        color: #1DB954; /* Spotify Green */
-        margin-right: 0.5rem;
-        width: 30px; /* Give it a fixed width for alignment */
-        text-align: right;
-    }
-
-    .track-name {
-        font-weight: bold;
-        color: #fff;
-    }
-
-    .artist-name {
-        color: #b3b3b3;
-        font-size: 0.9em;
-    }
-
-    .error-message {
-        color: #ff4d4d;
-        text-align: center;
-        margin-top: 2rem;
-    }
-</style>
-
-<div class="playlist-container">
-    <h1>Playlist Tracks</h1>
+<div class="max-w-4xl mx-auto my-8 p-6 bg-[#1a1a1a] rounded-lg shadow-lg text-gray-200">
+    <h1 class="text-[#1DB954] text-center mb-6 text-3xl font-bold">Playlist Tracks</h1>
 
     {#if tracks && tracks.length > 0}
-        <p>Displaying {tracks.length} tracks.</p> <!-- Added track count here -->
-        <ul class="track-list">
+        <p class="mb-4 text-lg">Displaying {tracks.length} tracks.</p>
+        <ul class="list-none p-0 divide-y divide-gray-700">
             {#each tracks as item, i}
-                <li class="track-item">
-                    <div class="track-number">{i + 1}.</div> <!-- Added track number -->
-                    <div class="track-info">
-                        <div class="track-name">{item.track.name}</div>
-                        <div class="artist-name">{item.track.artists.map(a => a.name).join(', ')}</div>
+                <li class="flex items-center py-3">
+                    <div class="font-bold text-[#1DB954] mr-2 w-[30px] text-right text-lg">{i + 1}.</div>
+                    <div class="flex-1 ml-4">
+                        <div class="font-bold text-white text-lg">{item.track.name}</div>
+                        <div class="text-gray-400 text-sm">{item.track.artists.map(a => a.name).join(', ')}</div>
                     </div>
                 </li>
             {/each}
         </ul>
     {:else if tracks}
-        <p class="error-message">No tracks found for this playlist.</p>
+        <p class="text-[#ff4d4d] text-center mt-8 text-lg">No tracks found for this playlist.</p>
     {:else}
-        <p class="error-message">Could not load playlist tracks. Please check the playlist ID and your API credentials.</p>
+        <p class="text-[#ff4d4d] text-center mt-8 text-lg">Could not load playlist tracks. Please check the playlist ID and your API credentials.</p>
     {/if}
 </div>
