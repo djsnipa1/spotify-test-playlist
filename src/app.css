@@ -4,6 +4,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-electrolize: Electrolize, sans-serif;
+}
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

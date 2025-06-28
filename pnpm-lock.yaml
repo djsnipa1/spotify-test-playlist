@@ -14,6 +14,9 @@ importers:
       '@eslint/js':
         specifier: ^9.18.0
         version: 9.29.0
+      '@fontsource/electrolize':
+        specifier: ^5.2.6
+        version: 5.2.6
       '@internationalized/date':
         specifier: ^3.8.2
         version: 3.8.2
@@ -305,6 +308,9 @@ packages:
 
   '@floating-ui/utils@0.2.9':
     resolution: {integrity: sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==}
+
+  '@fontsource/electrolize@5.2.6':
+    resolution: {integrity: sha512-ZsqS092qHAzO+HsHNKVi1ID7YhZVg54QkBIIMPs5THw35jZLPn40TPgqNObXwLFe0YFGlHQK99r1axwsGNdXPA==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1661,6 +1667,8 @@ snapshots:
       '@floating-ui/utils': 0.2.9
 
   '@floating-ui/utils@0.2.9': {}
+
+  '@fontsource/electrolize@5.2.6': {}
 
   '@humanfs/core@0.19.1': {}
 
