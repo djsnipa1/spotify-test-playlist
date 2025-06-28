@@ -8,7 +8,7 @@
 
 
 <div class="flex justify-center items-center min-h-screen">
-  <Button href="/spotify/4ihNP1UPb4UiA15BFfWr6g"
+  <Button href="spotify/4ihNP1UPb4UiA15BFfWr6g"
     class="text-xl text-white w-48 font-electrolize h-12 rounded-full bg-spotify  relative overflow-hidden group z-10 duration-1000"
   >
   <span
