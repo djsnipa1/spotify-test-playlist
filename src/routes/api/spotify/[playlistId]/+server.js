@@ -83,7 +83,15 @@ export async function GET({ params }) {
             offset += LIMIT_PER_REQUEST;
         }
         
-        const tracksToReturn = allTracks.slice(0, MAX_TRACKS_TO_FETCH);
+        const tracksToReturn = allTracks.slice(0, MAX_TRACKS_TO_FETCH).map(item => ({
+            id: item.track.id,
+            name: item.track.name,
+            artist: item.track.artists[0]?.name || 'Unknown Artist',
+            album: item.track.album.name,
+            thumbnail: item.track.album.images[0]?.url || null, // Add thumbnail here
+            preview_url: item.track.preview_url,
+        }));
+
         console.log(`${consoleDebugIntro}  Final tracks to return: ${tracksToReturn.length}`);
 
         // Return both tracks and playlist image
