@@ -1,12 +1,18 @@
 @import "tailwindcss";
+@import "@fontsource/electrolize";
 
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-electrolize: Electrolize, sans-serif;
+  --font-electrolize: "Electrolize", sans-serif;
+  --color-spotify: #1ED760;
+  --color-spotify-200: #18AC4C;
+  --color-spotify-300: #138A3D;
+  --color-spotify-400: #0F682E;
 }
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
