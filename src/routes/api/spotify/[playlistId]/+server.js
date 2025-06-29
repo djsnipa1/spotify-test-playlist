@@ -39,6 +39,7 @@ export async function GET({ params }) {
         let allTracks = [];
         let offset = 0;
         let itemsFetchedInCurrentBatch = -1; // Initialize to -1 to ensure loop runs at least once
+        let totalTracksInPlaylist = null
 
         // Step 2a: Get Playlist Details (including image)
         try {
@@ -70,6 +71,8 @@ export async function GET({ params }) {
                 throw error(err.statusCode || 500, `Failed to retrieve playlist tracks for offset ${offset}: ${err.message || 'Unknown error'}`);
             }
             
+            totalTracksInPlaylist = currentBatchResponse.body.total;
+
             const items = currentBatchResponse.body.items || [];
             itemsFetchedInCurrentBatch = items.length; // How many items were in this response
 
@@ -98,7 +101,8 @@ export async function GET({ params }) {
         return json({
             tracks: tracksToReturn,
             playlistName: playlistName,
-            playlistImage: playlistImage
+            playlistImage: playlistImage,
+            totalTracksInPlaylist: totalTracksInPlaylist
         });
 
     } catch (e) {

@@ -18,12 +18,13 @@ export async function load({ params, fetch }) {
         }
 
         const data = await apiResponse.json();
-        console.log(`[Page Server Debug] Received data from internal API. Playlist Image: ${data.playlistImage ? data.playlistImage : 'Not found'}, Tracks count: ${data.tracks ? data.tracks.length : '0'}`);
+        console.log(`[Page Server Debug] Received data from internal API. Playlist Image: ${data.playlistImage ? data.playlistImage : 'Not found'}, Tracks count: ${data.tracks ? data.tracks.length : '0'}, Total Tracks: ${data.totalTracksInPlaylist}`);
 
         return {
             tracks: data.tracks,
             playlistName: data.playlistName,
-            playlistImage: data.playlistImage // Pass the playlist image from the API response
+            playlistImage: data.playlistImage,
+            totalTracksInPlaylist: data.totalTracksInPlaylist // Pass the totalTracksInPlaylist
         };
 
     } catch (e) {

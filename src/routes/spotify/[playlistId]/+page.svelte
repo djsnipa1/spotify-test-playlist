@@ -12,10 +12,10 @@
 	}));
 	const playlistName = data.playlistName; // Ensure this is received if you're using it
 	const playlistImage = data.playlistImage;
+	const totalTracksInPlaylist = data.totalTracksInPlaylist;
 </script>
 
-
-<hr />
+{@debug totalTracksInPlaylist }
 
 <div class="flex w-full justify-center p-2 font-electrolize">
 	<Card.Root class="w-full max-w-sm">
@@ -30,7 +30,7 @@
 				{/if}
 			</div>
 			<Card.Title class="mx-auto text-center text-lg font-electoize">{playlistName}</Card.Title>
-			<Card.Description class="mx-auto text-sm">Displaying {tracks.length} tracks</Card.Description>
+			<Card.Description class="mx-auto text-sm">Displaying {tracks.length} of {totalTracksInPlaylist} tracks</Card.Description>
 		</Card.Header>
 		<Card.Content>
 			<!-- <div class="flex overflow-visible"> -->
