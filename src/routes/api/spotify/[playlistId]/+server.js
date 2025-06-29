@@ -93,6 +93,8 @@ export async function GET({ params }) {
             album: item.track.album.name,
             thumbnail: item.track.album.images[0]?.url || null, // Add thumbnail here
             preview_url: item.track.preview_url,
+            track_url: item.track.external_urls.spotify, // Track URL
+            artist_url: item.track.artists[0]?.external_urls?.spotify || null,
         }));
 
         console.log(`${consoleDebugIntro}  Final tracks to return: ${tracksToReturn.length}`);

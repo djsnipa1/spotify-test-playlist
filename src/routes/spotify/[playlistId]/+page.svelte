@@ -8,14 +8,14 @@
 		number: index + 1,
 		title: track.name,
 		artist: track.artist,
-		thumbnail: track.thumbnail
+		thumbnail: track.thumbnail,
+		track_url: track.track_url,
+		artist_url: track.artist_url
 	}));
 	const playlistName = data.playlistName; // Ensure this is received if you're using it
 	const playlistImage = data.playlistImage;
 	const totalTracksInPlaylist = data.totalTracksInPlaylist;
 </script>
-
-{@debug totalTracksInPlaylist }
 
 <div class="flex w-full justify-center p-2 font-electrolize">
 	<Card.Root class="w-full max-w-sm">
@@ -24,7 +24,7 @@
 				{#if playlistImage}
 				<img
 				src={playlistImage}
-				class="mx-auto mb-2 w-1/2 rounded-md object-cover"
+				class="mx-auto mb-2 w-5/8 rounded-md object-cover"
 				alt="Playlist Cover Art"
 				/>
 				{/if}
